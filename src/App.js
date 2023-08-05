@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './components/assets/logo.png';
 import './App.css';
 import ReportForm from './components/pages/Report';
+import Support from './components/pages/Support';
 
 const App = () => {
   const [currentForm, setCurrentForm] = useState("about")
@@ -43,6 +44,10 @@ const App = () => {
       {
         currentForm === "report" &&
         <ReportForm />
+      }
+      {
+        currentForm === "support" &&
+        <Support />
       }
 
     </div>

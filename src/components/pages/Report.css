@@ -93,7 +93,7 @@ body {
   
   #info h1 {
     font-size: 1.5rem; /* Larger font size for the heading */
-    font-weight: bold;
+    
     color: #333; /* Black text color */
     margin-bottom: 1rem; /* Space below the heading */
   }

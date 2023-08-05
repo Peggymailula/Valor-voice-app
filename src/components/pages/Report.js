@@ -33,7 +33,7 @@ const ReportForm = () => {
                     <div className="col-md-8">
                         <div className="card content">
                             <div className="card-header header">
-                                <h1 className="logo">Report Form</h1>
+                                <h1 className="logo" style={{ color: '#000000' }}>Report Form</h1>
                             </div>
 
                             <div className="card-body">
@@ -110,7 +110,7 @@ const ReportForm = () => {
                                         />
                                     </div>
                                     <div className="form-group" id="info">
-                                        <h1>Comment</h1>
+
                                         <label htmlFor="comment">Comment:</label>
                                         <textarea
                                             className="form-control"
