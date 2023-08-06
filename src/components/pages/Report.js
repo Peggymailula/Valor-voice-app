@@ -253,7 +253,7 @@ const ReportForm = () => {
                                             className="form-control"
                                             id="fullName"
                                             name="fullName"
-                                            required
+
                                             value={formData.fullName}
                                             onChange={(e) => handleInputChange(e, 'fullName')}
                                         />
