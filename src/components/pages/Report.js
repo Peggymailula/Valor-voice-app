@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Report.css'; // Import your CSS file
+import Input from '../Input/Input';
+import Select from '../Select/Select';
 
 const ReportForm = () => {
     const [formData, setFormData] = useState({
@@ -12,36 +14,49 @@ const ReportForm = () => {
         comment: '',
     });
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
+    const handleInputChange = (event, fieldName) => {
+        const { value } = event.target;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: value,
+            [fieldName]: value,
         }));
     };
+
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
         // Here you can perform form submission logic using formData
         console.log(formData);
     };
+    const relationshipOptions = [
+        { value: "victim", label: "Victim" },
+        { value: "reporter", label: "Reporter" },
+        { value: "civilService", label: "Service Worker" }
+    ]
+
+    const communicationOptions = [
+        { value: "call", label: "Call" },
+        { value: "email", label: "Email" },
+        { value: "sms", label: "SMS" },
+    ]
 
     return (
         <section>
             <div className="container max-width-large">
                 <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <div className="card content">
+                    <div className="col-md-3">
+                        <div className="">
                             <div className="card-header header">
-                                <h1 className="logo" style={{ color: '#000000' }}>Report Form</h1>
+                                <h1 className="logo" >Report Form</h1>
                             </div>
 
                             <div className="card-body">
                                 <form onSubmit={handleSubmit}>
                                     <div className="form-group" id="info">
                                         <h1>Personal Information</h1>
-                                        <label htmlFor="fullName">Full Name:</label>
-                                        <input
+                                        <Input
+                                            label="Full Name"
                                             type="text"
                                             className="form-control"
                                             id="fullName"
@@ -52,41 +67,36 @@ const ReportForm = () => {
                                         />
                                     </div>
 
+
                                     <div className="form-group" id="info">
                                         <h1>Relationship</h1>
-                                        <label htmlFor="relationship">I am the:</label>
-                                        <select
-                                            className="form-control"
-
+                                        <Select
                                             id="relationship"
-                                            name="relationship"
-                                            required
+                                            label="I am the : "
                                             value={formData.relationship}
-                                            onChange={handleInputChange}
-                                        >
-                                            <option value="victim">Victim</option>
-                                            <option value="reporter">Reporter</option>
-                                            <option value="civilService">Civil Service Worker</option>
-                                        </select>
+                                            onChange={(e) => handleInputChange(e, 'relationship')}
+                                            options={relationshipOptions}
+                                        />
                                     </div>
+
                                     <div className="form-group" id="info">
-                                        <label htmlFor="communicationMethod">Preferred method of communication:</label>
-                                        <select
+
+                                        <Select
+                                            onChange={(e) => handleInputChange(e, 'communicationMethod')}
                                             className="form-control"
                                             id="communicationMethod"
-                                            name="communicationMethod"
+                                            name="relationship"
                                             required
                                             value={formData.communicationMethod}
-                                            onChange={handleInputChange}
-                                        >
-                                            <option value="email">Email</option>
-                                            <option value="phone">Phone</option>
-                                            <option value="mail">Mail</option>
-                                        </select>
+                                            label="Preferred method of communication : "
+                                            options={communicationOptions}
+                                        />
+
                                     </div>
                                     <div className="form-group" id="info">
                                         <label htmlFor="incidentType">Incident Type:</label>
-                                        <input
+                                        <Input
+                                            label="Description"
                                             type="text"
                                             className="form-control"
                                             id="incidentType"
@@ -96,10 +106,12 @@ const ReportForm = () => {
                                             onChange={handleInputChange}
                                         />
 
+
                                     </div>
                                     <div className="form-group" id="info">
-                                        <label htmlFor="contactTime">When can we contact you?</label>
-                                        <input
+
+                                        <Input
+                                            label="When can we contact you?"
                                             type="text"
                                             className="form-control"
                                             id="contactTime"
@@ -108,11 +120,12 @@ const ReportForm = () => {
                                             value={formData.contactTime}
                                             onChange={handleInputChange}
                                         />
+
                                     </div>
                                     <div className="form-group" id="info">
-
-                                        <label htmlFor="comment">Comment:</label>
-                                        <textarea
+                                        <Input
+                                            label="Comment"
+                                            type="text"
                                             className="form-control"
                                             id="comment"
                                             name="comment"

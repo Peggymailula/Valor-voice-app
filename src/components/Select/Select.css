@@ -1,0 +1,11 @@
+/* ... (other styles remain unchanged) */
+
+.custom-select {
+    height: 35px; /* Increase the height to 35px or adjust as needed */
+    padding: 10px;
+    margin-left: 15px;
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
