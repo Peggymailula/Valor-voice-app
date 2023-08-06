@@ -43,16 +43,18 @@ main {
 }
 
 .post-form button {
-    padding: 5px 10px;
-    background-color: #4caf50;
+    background-color: plum;
     color: white;
+    font-size: 18px;
+    padding: 20px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 .post-form button:hover {
-    background-color: #45a049;
+    background-color: #8a2be2;
 }
 
 #posts-container {
@@ -81,3 +83,19 @@ footer {
     background-color: #a68dbf;
     padding: 10px;
 }
+
+.buttonPost {
+    background-color: plum;
+    color: white;
+    font-size: 18px;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+   
+  }
+  
+  .buttonPost {
+    background-color: #8a2be2; /* Darker shade of purple on hover */
+  }

@@ -40,7 +40,7 @@ const Forum = () => {
                         value={postText}
                         onChange={(e) => setPostText(e.target.value)}
                     ></textarea>
-                    <button onClick={postBlog}>Post</button>
+                    <button onClick={postBlog} className="buttonPost">Post</button>
                 </div>
 
                 <div id="posts-container">
