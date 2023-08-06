@@ -13,6 +13,9 @@ const ReportForm = () => {
         contactTime: '',
         comment: '',
     });
+    const [isNotSubmitted, setSubmit] = useState(true);
+    const [alertMessage, setAlertMessage] = useState('');
+
     const jsonData = [
         {
             "description": "Victim sustained a gunshot wound to the leg.",
@@ -182,14 +185,34 @@ const ReportForm = () => {
         );
 
         if (matchedDescription) {
-            alert(`Possible reason for injury is : ${matchedDescription.crime_type}`);
+            setAlertMessage(`Possible reason for injury is: ${matchedDescription.crime_type}`);
+
+            // Clear the alert after a certain period of time (e.g., 5 seconds)
+            setTimeout(() => {
+                setAlertMessage('');
+            }, 5000);
         }
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setSubmit(false)
+
+        const alertElement = document.createElement('div');
+        alertElement.className = 'alert';
+        alertElement.textContent = 'Thank you for reporting.We appreaciate your Valor!';
+
+        // Append the alert element to a suitable container (e.g., the form)
+        const form = document.querySelector('form');
+        form.appendChild(alertElement);
+
+        // Remove the alert after a certain period of time (e.g., 5 seconds)
+        setTimeout(() => {
+            form.removeChild(alertElement);
+        }, 5000);
         // Here you can perform form submission logic using formData
         console.log(formData);
+
 
         // Check if the entered incidentType matches any description from the JSON data
 
@@ -221,6 +244,7 @@ const ReportForm = () => {
 
                             <div className="card-body">
                                 <form onSubmit={handleSubmit}>
+                                    {alertMessage && <div className="alert">{alertMessage}</div>}
                                     <div className="form-group" id="info">
                                         <h1>Personal Information</h1>
                                         <Input
@@ -306,11 +330,14 @@ const ReportForm = () => {
 
 
 
-                                    <div className="text-right">
-                                        <button type="submit" className="toggle-buttons" >
-                                            Submit
-                                        </button>
-                                    </div>
+                                    {isNotSubmitted &&
+                                        <div className="text-right">
+                                            <button type="submit" className="toggle-buttons" >
+                                                Submit
+                                            </button>
+                                        </div>
+                                    }
+
                                 </form>
                             </div>
                         </div>
