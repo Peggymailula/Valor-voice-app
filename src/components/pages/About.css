@@ -1,0 +1,42 @@
+.member {
+    width: 330px;
+    height: 330px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .member-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+ 
+  .member-info h4 {
+    margin-bottom: 5px;
+    color: #333;
+  }
+ 
+  .member-info span {
+    color: #666;
+    font-size: 14px;
+  }
+ 
+  .social a {
+    display: inline-block;
+    margin: 5px;
+    color: #333;
+    font-size: 18px;
+  }
+ 
+  .social a:hover {
+    color: #007bff; /* Change to your preferred hover color */
+  }
+  .row {
+    align-content: align;
+    align-items:flex-end ;
+  }
