@@ -3,6 +3,7 @@ import logo from './components/assets/logo.png';
 import './App.css';
 import ReportForm from './components/pages/Report';
 import Support from './components/pages/Support';
+import Forum from './components/pages/Forum';
 
 const App = () => {
   const [currentForm, setCurrentForm] = useState("about");
@@ -20,6 +21,7 @@ const App = () => {
             <li onClick={() => setCurrentForm("about")}>About</li>
             <li onClick={() => setCurrentForm("report")}>Reporting</li>
             <li onClick={() => setCurrentForm("support")}>Support</li>
+            <li onClick={() => setCurrentForm("forum")}>Community Forum</li>
           </ul>
         </nav>
       </header>
@@ -43,6 +45,7 @@ const App = () => {
 
       {currentForm === "report" && <ReportForm />}
       {currentForm === "support" && <Support />}
+      {currentForm === "forum" && <Forum />}
     </div>
   );
 };
