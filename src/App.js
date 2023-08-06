@@ -49,10 +49,10 @@ const App = () => {
             Valor Voice
           </div>
           <ul className="nav-links">
-            <li onClick={() => setCurrentForm("about")}>About</li>
-            <li onClick={() => setCurrentForm("report")}>Reporting</li>
-            <li onClick={() => setCurrentForm("support")}>Support</li>
-            <li onClick={() => setCurrentForm("forum")}>Community Forum</li>
+            <li onClick={() => setCurrentForm("about")} style={{ textDecoration: currentForm === "about" ? "underline" : "none" }}>About</li>
+            <li onClick={() => setCurrentForm("report")} style={{ textDecoration: currentForm === "report" ? "underline" : "none" }}>Reporting</li>
+            <li onClick={() => setCurrentForm("support")} style={{ textDecoration: currentForm === "support" ? "underline" : "none" }}>Support</li>
+            <li onClick={() => setCurrentForm("forum")} style={{ textDecoration: currentForm === "forum" ? "underline" : "none" }}>Community Forum</li>
           </ul>
         </nav>
       </header>

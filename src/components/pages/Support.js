@@ -24,7 +24,7 @@ const Support = () => {
                                 <div className="icon">
                                     <i className="bi bi-activity"></i>
                                 </div>
-                                <h3>Volunteering</h3>
+                                <h3 style={{ backgroundColor: "#ffff", color: "purple" }}>Volunteering</h3>
                                 <p style={{ backgroundColor: "#ffff", color: "purple" }}>Join our volunteering program and make a positive impact on the community. Your contributions can bring about meaningful change and create a better world for everyone.</p>
                             </div>
                         </div>
@@ -40,7 +40,7 @@ const Support = () => {
                                 <div className="icon">
                                     <i className="bi bi-broadcast"></i>
                                 </div>
-                                <h3>Callback</h3>
+                                <h3 style={{ backgroundColor: "#ffff", color: "purple" }}>Callback</h3>
                                 <p style={{ backgroundColor: "#ffff", color: "purple" }}>Need someone to talk to? Our callback service provides a supportive environment for you to share your thoughts and feelings. We're here to lend an empathetic ear.</p>
                             </div>
                         </div>
@@ -56,7 +56,7 @@ const Support = () => {
                                 <div className="icon">
                                     <i className="bi bi-easel"></i>
                                 </div>
-                                <h3>Chat Group</h3>
+                                <h3 style={{ backgroundColor: "#ffff", color: "purple" }}>Chat Group</h3>
                                 <p style={{ backgroundColor: "#ffff", color: "purple" }}>Join our chat group to connect with like-minded individuals. Share experiences, seek advice, and find a community that understands and supports you.</p>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ const Support = () => {
                                     {/* Add appropriate icon here */}
                                     <i className="bi bi-person"></i>
                                 </div>
-                                <h3>Counselling</h3>
+                                <h3 style={{ backgroundColor: "#ffff", color: "purple" }}>Counselling</h3>
                                 <p style={{ backgroundColor: "#ffff", color: "purple" }}>Professional counseling services are available for individuals seeking guidance and support. Our trained counselors are here to help you navigate through life's challenges.</p>
                             </div>
                         </div>
