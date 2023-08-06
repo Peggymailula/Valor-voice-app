@@ -111,4 +111,21 @@ body {
     color: purple; /* Dark gray text color */
     font-family: 'Georgia', 'Times New Roman', serif; /* Apply the feminine font to info section paragraphs */
   }
+
+  .toggle-buttons {
+    background-color: plum;
+    color: white;
+    font-size: 18px;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+   
+  }
+  
+  .toggle-buttons:hover {
+    background-color: #8a2be2; /* Darker shade of purple on hover */
+  }
+  
   

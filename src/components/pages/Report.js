@@ -63,7 +63,7 @@ const ReportForm = () => {
                                             name="fullName"
                                             required
                                             value={formData.fullName}
-                                            onChange={handleInputChange}
+                                            onChange={(e) => handleInputChange(e, 'fullName')}
                                         />
                                     </div>
 
@@ -94,7 +94,6 @@ const ReportForm = () => {
 
                                     </div>
                                     <div className="form-group" id="info">
-                                        <label htmlFor="incidentType">Incident Type:</label>
                                         <Input
                                             label="Description"
                                             type="text"
@@ -103,7 +102,7 @@ const ReportForm = () => {
                                             name="incidentType"
                                             required
                                             value={formData.incidentType}
-                                            onChange={handleInputChange}
+                                            onChange={(e) => handleInputChange(e, 'incidentType')}
                                         />
 
 
@@ -118,7 +117,7 @@ const ReportForm = () => {
                                             name="contactTime"
                                             required
                                             value={formData.contactTime}
-                                            onChange={handleInputChange}
+                                            onChange={(e) => handleInputChange(e, 'contactTime')}
                                         />
 
                                     </div>
@@ -132,7 +131,7 @@ const ReportForm = () => {
                                             rows="4"
                                             required
                                             value={formData.comment}
-                                            onChange={handleInputChange}
+                                            onChange={(e) => handleInputChange(e, 'comment')}
                                         />
 
                                     </div>
@@ -140,7 +139,7 @@ const ReportForm = () => {
 
 
                                     <div className="text-right">
-                                        <button type="submit" className="btn btn-primary btn-lg" style={{ backgroundColor: '#007bff', borderColor: '#007bff' }}>
+                                        <button type="submit" className="toggle-buttons" >
                                             Submit
                                         </button>
                                     </div>
